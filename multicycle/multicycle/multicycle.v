@@ -63,12 +63,12 @@ wire	[7:0] IR, SE4wire, ZE5wire, ZE3wire, AddrWire, RegWire;
 wire	[7:0] reg0, reg1, reg2, reg3;
 wire	[7:0] constant;
 wire	[1:0] R1_in;
+wire [7:0] temp_IR;
 wire	Nwire, Zwire;
 reg		N, Z;
 
 reg [15:0] cycle_count; // counter to keep track of the number of cycles that have passed
-assign reg2[7:0] = cycle_count[7:0];
-assign reg3[7:0] = cycle_count[15:8];
+
 wire Processing; // keeps track of whether or not it should keep track of the number of cycles that have passed
 
 
@@ -79,7 +79,7 @@ assign	reset =  ~KEY[0]; // KEY is active high
 
 // ------------------- DE1-Soc compatible HEX display ------------------- //
 HEXs	HEX_display(
-	.in0(reg0),.in1(reg1),.in2(reg2),.in3(reg3), .select(SW[2]),
+	.in0(reg0),.in1(reg1),.in2(cycle_count[7:0]),.in3(cycle_count[15:8]), .select(SW[2]),
 	.out0(HEX0),.out1(HEX1),.out2(HEX2),.out3(HEX3)
 	//.out4(HEX4),.out5(HEX5),.out6(HEX6),.out7(HEX7)
 );
@@ -114,8 +114,9 @@ FSM		Control(
 
 memory	DataMem(
 	.MemRead(MemRead),.wren(MemWrite),.clock(clock),
-	.address(AddrWire),.data(R1wire),.q(MEMwire)
+	.address(AddrWire),.data(R1wire),.q(MEMwire), .q_pc(temp_IR), .address_pc(PCwire)
 );
+
 
 ALU		ALU(
 	.in1(ALU1wire),.in2(ALU2wire),.out(ALUwire),
@@ -138,8 +139,8 @@ RF		RF_block(
 
 registers	IR_reg(
 	.clock(clock),.aclr(reset),.enable(IRLoad),
-	.data(MEMwire),.q(IR)
-);
+	.data(temp_IR),.q(IR)
+); 
 
 registers	MDR_reg(
 	.clock(clock),.aclr(reset),.enable(MDRLoad),

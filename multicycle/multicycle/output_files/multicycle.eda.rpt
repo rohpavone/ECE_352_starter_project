@@ -1,6 +1,6 @@
 EDA Netlist Writer report for multicycle
-Thu Nov 05 14:08:35 2015
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+Sat Nov 14 18:52:43 2015
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
 ---------------------
@@ -24,7 +24,7 @@ functions, and any output files from any of the foregoing
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus II License Agreement,
+Subscription Agreement, the Altera Quartus Prime License Agreement,
 the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Nov 05 14:08:35 2015 ;
+; EDA Netlist Writer Status ; Successful - Sat Nov 14 18:52:43 2015 ;
 ; Revision Name             ; multicycle                            ;
 ; Top-level Entity Name     ; multicycle                            ;
 ; Family                    ; Cyclone V                             ;
@@ -67,28 +67,28 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Simulation Generated Files                                                     ;
-+--------------------------------------------------------------------------------+
-; Generated Files                                                                ;
-+--------------------------------------------------------------------------------+
-; W:/Labs/7-2015-11-03/7/multicycle/multicycle/simulation/modelsim/multicycle.vo ;
-+--------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                        ;
++-------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                   ;
++-------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Rohan/OneDrive/Documents/ECE_352_starter_project/multicycle/multicycle/simulation/modelsim/multicycle.vo ;
++-------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Thu Nov 05 14:08:34 2015
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Sat Nov 14 18:52:42 2015
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off multicycle -c multicycle
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
-Info (204019): Generated file multicycle.vo in folder "W:/Labs/7-2015-11-03/7/multicycle/multicycle/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 656 megabytes
-    Info: Processing ended: Thu Nov 05 14:08:35 2015
+Info (204019): Generated file multicycle.vo in folder "C:/Users/Rohan/OneDrive/Documents/ECE_352_starter_project/multicycle/multicycle/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 807 megabytes
+    Info: Processing ended: Sat Nov 14 18:52:43 2015
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

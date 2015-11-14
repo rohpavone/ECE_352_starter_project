@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at multicycle.v(205): always construct contains both blocking and non-blocking assignments File: C:/Users/Rohan/OneDrive/Documents/ECE_352_starter_project/multicycle/multicycle/multicycle.v Line: 205
